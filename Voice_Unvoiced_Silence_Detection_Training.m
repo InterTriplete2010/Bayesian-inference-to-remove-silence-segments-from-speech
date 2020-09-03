@@ -413,6 +413,6 @@ cd(wav_path_training)
    
    close (testing_box)
  
- msgbox('End of the analysis','End of analysis')
+ msgbox('End of the analysis','End of the analysis')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
