@@ -302,6 +302,14 @@ cd(wav_path_training)
          break;
      end
      
+     %Check if NaN have been generated and if it has, assign a default
+     %value of 0 => silence      
+   if sum(isnan(test_matrix_par > 0))
+   
+  test_matrix_par(:,:) = 0;
+   
+   end
+     
      try
          
          temp_gauss_silence = mvnpdf(test_matrix_par,mean_silence',cov_silence);
@@ -319,6 +327,7 @@ cd(wav_path_training)
          temp_gauss_silence = mvnpdf(test_matrix_par,mean_silence',temp_cov_silence);
          
      end
+     
      try
          
          temp_gauss_voiced = mvnpdf(test_matrix_par,mean_voiced',cov_voiced);
@@ -340,7 +349,8 @@ cd(wav_path_training)
      class_silence = p_silence*temp_gauss_silence;
     class_voiced = p_voiced*temp_gauss_voiced;
     
-    if class_silence > class_voiced
+    %If equal probability, then assign the sample to silence
+    if class_silence >= class_voiced
     
 %       classes(kk) = {'S'};
 %       plot(tt(round(mean(start_t:end_t))),0.5,'ro');
@@ -376,7 +386,8 @@ cd(wav_path_training)
             
         end
         
-    else
+        
+    %else
         
 %         classes(kk) = {'NC'};
 %         plot(tt(round(mean(start_t:end_t))),0,'ko');
