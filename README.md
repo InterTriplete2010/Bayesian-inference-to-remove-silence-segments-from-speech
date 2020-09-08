@@ -9,7 +9,7 @@ Here is how the GUI works:
 
 1) To start the GUI type "Silence_Removal_Speech";
 
-2) "Upload waveform": selecte the speech waveform that you want to use for training the algorithm. 
+2) "Upload waveform": select the speech waveform that you want to use for training the algorithm. 
 
 3) "Low Pass IIR Filter (Butterworth)": The speech waveform is high-pass filtered to remove low frequency noise. Type the order of the filter and the corner frequency. By default, the corner frequency is 200 Hz, as recommended by Rabiner and Schafer;
 
