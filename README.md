@@ -21,7 +21,7 @@ Here is how the GUI works:
   
 7) "EM Loops": Number of interactions used for the Expectation Maximization (EM) algorithm. The EM is then used to optimize the parameters for the multivariate gaussian distribution;
 
-8) "Upload directory": Upload the directory where the waveforms that need to have silence segments removed are stored. The code will loop through all the .wav files that it finds in the selected directory;
+8) "Upload directory": Upload the directory where the waveforms that need to have silence segments removed are stored. The code will loop through all the ".wav" files that it finds in the selected directory;
 
 9) "Max allowable silence segment": Select the maximum length of each silence segment. The default one is 500 ms, which means silence segments cannot be longer than 500 ms. 
 
