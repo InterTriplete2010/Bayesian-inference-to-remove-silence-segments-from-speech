@@ -404,7 +404,7 @@ cd(wav_path_training)
  %segment needs to be shortened
  end_t = length(test_signal);
  duration_silence = end_t - time_shift - start_track_time_silence;
- if (duration_silence > silence_window)
+ if (duration_silence > silence_window & start_track_time_silence ~= 0)
                
                 interval_time = duration_silence - silence_window;
                 temp_median = round(median(start_track_time_silence:end_t - time_shift));
