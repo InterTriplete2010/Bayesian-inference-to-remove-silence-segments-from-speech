@@ -402,6 +402,8 @@ cd(wav_path_training)
  
  %If the waveform ends with a silence segment, check if the the last
  %segment needs to be shortened
+ end_t = length(test_signal);
+ duration_silence = end_t - time_shift - start_track_time_silence;
  if (duration_silence > silence_window)
                
                 interval_time = duration_silence - silence_window;
