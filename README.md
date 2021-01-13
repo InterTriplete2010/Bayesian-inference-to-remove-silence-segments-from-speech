@@ -5,7 +5,11 @@ Bayesian inference to remove silence segments from speech
 This GUI detects and removes silence segments from speech (voiced and unvoiced) using a Bayesian approach, as described in "Theory and Applications of Digital Speech Processing" by Lawrence Rabiner
 Ronald Schafer (page 595 to page 603). 
 
-Please, keep in mind that if the audio file has 2 channels, the code assumes that the 2 channels are identical and therefore analyzes only channel 1 (audio_in(:,1)), which will be then used to create the final 2-channel audio file ([audio_out(:,1) audio_out(:,1)]) with silence removed.
+Please, keep in mind the following two facts:
+
+1) if the audio file has 2 channels, the code assumes that the 2 channels are identical and therefore analyzes only channel 1 (audio_in(:,1)), which will be then used to create the final 2-channel audio file ([audio_out(:,1) audio_out(:,1)]) with silence removed.
+
+2) Check if you have the following toolboxes: System Identification toolbox, DSP System toolbox and Statistics and Machine Learning Toolbox. The code won't work without these toolboxes, because you will need them to call the following functions: "ar", "DSP.ZeroCrossingDetector" and "mvnpdf". All the other matlab fucntions that I am using should belong to toolboxes that more commonly used that the above mentioned ones. 
 
 Here is how the GUI works:
 
