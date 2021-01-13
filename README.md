@@ -3,7 +3,7 @@ Bayesian inference to remove silence segments from speech
 
 
 This GUI detects and removes silence segments from speech (voiced and unvoiced) using a Bayesian approach, as described in "Theory and Applications of Digital Speech Processing" by Lawrence Rabiner
-Ronald Schafer (page 595 to page 603). 
+Ronald Schafer (page 595 to page 603). Please, keep in mind that if the audio file has 2 channels, the code assumes that the 2-channels are identical and therefore analyzes only 1 of them to create the final 2-channel audio file with silence removed.
 
 Here is how the GUI works:
 
