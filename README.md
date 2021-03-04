@@ -31,7 +31,13 @@ Here is how the GUI works:
 
 9) "Max allowable silence segment": Select the maximum length of each silence segment. The default one is 500 ms, which means silence segments cannot be longer than 500 ms. 
 
-10) "Remove Silence": The code will be executed. The new waveforms with shortened silence segments will be saved in the same folder selected in "Upload directory". The name of the new waveforms will be the "orginal_name_Shortened_Waveform.wav". For instance, if the original name was "Speech_1", the waveform with shortened silence segments will be saved with the name "Speech_1_Shortened_Waveform.wav"
+10) "Remove Silence": The code will be executed. 
+
+11) Please keep in mind the following during the execution of the code. During the training phase, the following message will appear: "Training the algorithm". The training part could take some time, depending on how much data has been used. The user should not close this window, as the program will automatically close it when training is complete. When training is complete, the message "Training the algorithm" will be replaced with the following message: "Applying the algorithm to the waveforms stored in the selected folder, removing silence and saving the new wave files','Applying the algorithm". 
+
+12) The new waveforms with shortened silence segments will be saved in the same folder selected in "Upload directory". The name of the new waveforms will be the "orginal_name_Shortened_Waveform.wav". For instance, if the original name was "Speech_1", the waveform with shortened silence segments will be saved with the name "Speech_1_Shortened_Waveform.wav"
+
+13) Very important: I tried to handle all the exceptions that could occur. If an exception kicks in, a message informing the user of the exception will appear and the program will be aborted. If you experience an exception that is not handled by the code, please let me know and I will add it. Thank you!!!
 
 These Matlab files are part of a large Toolbox that I wrote and that I am using to analyze EEG and MEG data.
 
